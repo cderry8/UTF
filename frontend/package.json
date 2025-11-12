@@ -12,11 +12,13 @@
     "@fontsource/inter": "^5.2.5",
     "@fontsource/lobster": "^5.2.5",
     "@fontsource/monomaniac-one": "^5.2.5",
+    "axios": "^1.9.0",
     "lucide-react": "^0.506.0",
     "next": "14.2.23",
     "react": "^18",
     "react-dom": "^18",
-    "react-icons": "^5.5.0"
+    "react-icons": "^5.5.0",
+    "sweetalert2": "^11.22.1"
   },
   "devDependencies": {
     "eslint": "^8",

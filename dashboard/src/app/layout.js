@@ -12,10 +12,12 @@ export default function RootLayout({ children }) {
       <body className='flex min-h-screen ' >
         <Sidebar />
         
-        <main className="flex-1 p-4">
+        <main className="flex-1 p-4 ml-[72px] overflow-x-auto">
           {children}
         </main>
       </body>
     </html>
   );
 }
+
+

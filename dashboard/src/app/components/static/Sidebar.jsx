@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, Users, CalendarDays, ListChecks, UserCog, LogOut } from 'lucide-react';
+import { Users, CalendarDays, ListChecks, UserCog, LogOut } from 'lucide-react';
 
 const topLinks = [
   { name: 'Users', href: '/', icon: Users },
@@ -17,13 +17,11 @@ export default function Sidebar() {
   return (
     <aside className="bg-black/70 shadow-sm text-white min-h-screen w-[72px] lg:w-[240px] transition-all p-4 flex flex-col justify-between">
       <div>
-        {/* Logo/Header */}
         <div className="flex justify-center lg:justify-start mt-10 items-center mb-8">
           <span className="mr-0 lg:mr-3 text-[30px]">⚽</span>
           <span className="hidden lg:block text-xl font-semibold">UTF Dashboard</span>
         </div>
 
-        {/* Main Navigation Links */}
         <nav className="space-y-2 mt-16">
           {topLinks.map(({ name, href, icon: Icon }) => (
             <Link
@@ -40,11 +38,10 @@ export default function Sidebar() {
         </nav>
       </div>
 
-      {/* Log Out Link at the Bottom */}
-      <div className="">
+      <div>
         <Link
           href="/logout"
-          className="flex justify-center items-center space-x-3  px-3 py-2 rounded-md transition hover:bg-[rgb(0,191,255)]"
+          className="flex justify-center items-center space-x-3 px-3 py-2 rounded-md transition hover:bg-[rgb(0,191,255)]"
         >
           <LogOut className="w-5 h-5" />
           <span className="hidden lg:inline text-sm">Log Out</span>
