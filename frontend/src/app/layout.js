@@ -20,6 +20,7 @@ export default function RootLayout({ children }) {
         <main className=" w-full mx-auto">
           {children}
         </main>
+        <Analytics />
       </body>
     </html>
   );
