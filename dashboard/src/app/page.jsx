@@ -371,6 +371,8 @@ const Home = () => {
           </div>
         </div>
       )}
+      </>
+      ) : null}
 
       {/* Messages Section */}
       {activeTab === 'messages' && (

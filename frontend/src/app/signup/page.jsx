@@ -74,20 +74,6 @@ export default function Signup() {
     }
   };
 
-  const addSocialMedia = () => {
-    setForm(prev => ({
-      ...prev,
-      socialMedia: [...prev.socialMedia, { platform: '', link: '' }]
-    }));
-  };
-
-  const removeSocialMedia = (index) => {
-    setForm(prev => ({
-      ...prev,
-      socialMedia: prev.socialMedia.filter((_, i) => i !== index)
-    }));
-  };
-
   const handleManagerChange = (e) => {
     setManagerForm({ ...managerForm, [e.target.name]: e.target.value });
   };

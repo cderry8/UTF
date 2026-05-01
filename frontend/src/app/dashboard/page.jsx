@@ -9,7 +9,7 @@ import {
   Users, Trophy, Calendar, Settings, TrendingUp, 
   UserPlus, Edit2, Trash2, Shield, Gamepad2,
   ChevronRight, Loader2, AlertCircle, Bell, Search,
-  Mail, Send, X
+  Mail, Send, X, Clock, CheckCircle
 } from 'lucide-react';
 
 export default function Dashboard() {
