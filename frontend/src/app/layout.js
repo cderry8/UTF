@@ -1,5 +1,6 @@
 import './globals.css';
 import Navbar from "./components/static/Navbar";
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata = {
   title: "UTF League - EAFC Pro Clubs League Management",
