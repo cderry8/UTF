@@ -10,13 +10,13 @@ connect();
 
 const app = express();
 
-// Set up CORS to allow requests from the frontend (React or Next.js)
-app.use(cors({ origin: 'http://localhost:3001' })); 
 
-// Increase the body size limit to handle larger requests (10MB in this case)
-app.use(express.json({ limit: '10mb' }));  // You can adjust '10mb' as needed
+app.use(cors({ origin: 'http://localhost:3000' })); 
 
-// Your route setups
+
+app.use(express.json({ limit: '10mb' }));  
+
+
 const staffRoutes = require('./routes/StaffRoute');
 app.use('/utf/staff', staffRoutes);
 
@@ -36,5 +36,16 @@ app.use('/utf/fixtures', fixtureRoutes);
 const resultRoutes = require('./routes/ResultsRoute');
 app.use('/utf/results', resultRoutes);
 
-// Start the server
+const playerRoutes = require('./routes/PlayerRoute');
+app.use('/utf/players', playerRoutes);
+
+const playerUserRoutes = require('./routes/PlayerUserRoute');
+app.use('/utf/player-users', playerUserRoutes);
+
+const invitationRoutes = require('./routes/InvitationRoute');
+app.use('/utf/invitations', invitationRoutes);
+
+const messageRoutes = require('./routes/MessageRoute');
+app.use('/utf/messages', messageRoutes);
+
 app.listen(PORT, () => console.log(`✅ Server running on port ${PORT} ✅`));
